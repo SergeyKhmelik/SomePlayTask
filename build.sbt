@@ -8,7 +8,11 @@ scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
   javaJpa.exclude("org.hibernate.javax.persistence", "hibernate-jpa-2.0-api"),
-  javaJdbc
+  javaJdbc,
+  "org.mybatis" % "mybatis" % "3.3.0",
+  "org.mybatis" % "mybatis-guice" % "3.6",
+  "com.google.inject.extensions" % "guice-multibindings" % "4.0"
+
 )
 
 //Postgre driver
