@@ -32,9 +32,7 @@ public class SkillSearchController extends Controller {
     @Transactional
     public Result getAllCategories() {
         List<SkillCategory> categories = searchService.getCategories();
-        System.out.println("MASTER CONFLICT");
-        System.out.println("WOW WOW");
-        System.out.println("123");
+        System.out.printf("qkjwehqwjkhe");
         return ok(toJson(categories));
     }
 
