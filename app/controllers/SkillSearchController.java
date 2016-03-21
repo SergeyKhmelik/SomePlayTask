@@ -12,6 +12,7 @@ import services.SkillExpertSearchService;
 
 import java.util.List;
 
+import static play.libs.Json.setObjectMapper;
 import static play.libs.Json.toJson;
 
 @Api(value = "/", description = "The search of experts.")
