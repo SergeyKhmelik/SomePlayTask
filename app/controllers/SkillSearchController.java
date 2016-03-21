@@ -12,6 +12,7 @@ import services.SkillExpertSearchService;
 
 import java.util.List;
 
+import static play.libs.Json.setObjectMapper;
 import static play.libs.Json.toJson;
 
 @Api(value = "/", description = "The search of experts.")
@@ -31,6 +32,8 @@ public class SkillSearchController extends Controller {
     @Transactional
     public Result getAllCategories() {
         List<SkillCategory> categories = searchService.getCategories();
+        System.out.println("MASTER CONFLICT");
+        System.out.println("WOW WOW");
         System.out.println("123");
         return ok(toJson(categories));
     }
