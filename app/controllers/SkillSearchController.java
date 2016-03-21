@@ -32,6 +32,7 @@ public class SkillSearchController extends Controller {
     public Result getAllCategories() {
         List<SkillCategory> categories = searchService.getCategories();
         System.out.println("MASTER CONFLICT");
+        System.out.println("123");
         return ok(toJson(categories));
     }
 
