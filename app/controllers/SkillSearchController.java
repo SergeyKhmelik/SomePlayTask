@@ -12,13 +12,14 @@ import services.SkillExpertSearchService;
 
 import java.util.List;
 
+import static play.libs.Json.setObjectMapper;
 import static play.libs.Json.toJson;
 
 @Api(value = "/", description = "The search of experts.")
 public class SkillSearchController extends Controller {
 
     @Inject
-    SkillExpertSearchService searchService;//WTF? The project is under 2.2
+    SkillExpertSearchService searchService;
 
 
     @ApiOperation(
@@ -31,7 +32,7 @@ public class SkillSearchController extends Controller {
     @Transactional
     public Result getAllCategories() {
         List<SkillCategory> categories = searchService.getCategories();
-        System.out.println("MASTER CONFLICT");
+        System.out.printf("qkjwehqwjkhe");
         return ok(toJson(categories));
     }
 
