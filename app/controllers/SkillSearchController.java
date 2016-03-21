@@ -18,7 +18,7 @@ import static play.libs.Json.toJson;
 public class SkillSearchController extends Controller {
 
     @Inject
-    SkillExpertSearchService searchService;
+    SkillExpertSearchService searchService;//WTF? The project is under 2.2
 
 
     @ApiOperation(
