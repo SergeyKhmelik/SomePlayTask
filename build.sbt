@@ -31,7 +31,6 @@ libraryDependencies += "org.hibernate" % "hibernate-c3p0" % "4.3.9.Final"
 libraryDependencies += "org.hibernate" % "hibernate-ehcache" % "4.3.9.Final"
 libraryDependencies += "net.sf.ehcache" % "ehcache" % "2.10.1"
 
-
 //Swagger
 libraryDependencies += "io.swagger" %% "swagger-play2" % "1.5.1"
 
