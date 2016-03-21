@@ -38,6 +38,11 @@ public class SkillSearchController extends Controller {
         return ok(toJson(categories));
     }
 
+    @Transactional
+    public Result yetAnotherController() {
+        System.out.println("Nothing to be typed");
+        return badRequest();
+    }
 
     @ApiOperation(
             nickname = "getCategory",
