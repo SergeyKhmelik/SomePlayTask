@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="2016-03-17--01-apply-autoincrement.xml" relativeToChangelogFile="true"/>
+    <include file="2016-03-17--02-categories-data-import.xml" relativeToChangelogFile="true"/>
+    <include file="2016-03-17--03-skills-data-import.xml" relativeToChangelogFile="true"/>
+    <include file="2016-03-17--04-employees-data-import.xml" relativeToChangelogFile="true"/>
+    <include file="2016-03-17--05-employee-skills-data-import.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

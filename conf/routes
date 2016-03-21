@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+GET              /swagger                                    controllers.SwaggerController.mainSwaggerPage
+
+GET              /api-docs.json                               controllers.ApiHelpController.getResources
+
+GET             /                                           controllers.SkillSearchController.getAllCategories()
+
+GET             /:categoryName                              controllers.SkillSearchController.getCategory(categoryName)
+
+GET             /:categoryName/skills                       controllers.SkillSearchController.getSkills(categoryName)
+
+GET             /:categoryName/skills/:skillName            controllers.SkillSearchController.getSkill(categoryName, skillName)
+
+GET             /:categoryName/skills/:skillName/employees  controllers.SkillSearchController.getEmployees(categoryName, skillName)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET             /assets/*file                               controllers.Assets.versioned(path="/public", file: Asset)

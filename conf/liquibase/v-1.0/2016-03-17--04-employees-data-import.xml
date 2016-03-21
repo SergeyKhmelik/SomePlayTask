@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="4" author="khmelik">
+        <comment>Add initial employees data</comment>
+        <loadData
+                tableName="employee"
+                file="init-data/init-employees.csv"
+                separator=","
+                encoding="UTF-8"
+                relativeToChangelogFile="true"
+        >
+            <column name="id_employee" type="NUMERIC"/>
+            <column name="firstname" type="STRING"/>
+            <column name="lastname" type="STRING"/>
+            <column name="age" type="NUMERIC"/>
+        </loadData>
+
+        <rollback>
+            DELETE FROM employee;
+        </rollback>
+    </changeSet>
+    
+</databaseChangeLog>
