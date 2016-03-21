@@ -14,6 +14,10 @@ public class MD5Generator {
 
         byte[] dataBytes = new byte[1024];
 
+
+
+
+
         int nread = 0;
         while ((nread = fis.read(dataBytes)) != -1) {
             md.update(dataBytes, 0, nread);
