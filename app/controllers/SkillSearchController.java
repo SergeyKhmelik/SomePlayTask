@@ -32,11 +32,15 @@ public class SkillSearchController extends Controller {
     @Transactional
     public Result getAllCategories() {
         List<SkillCategory> categories = searchService.getCategories();
-        System.out.println("MASTER CONFLICT");
-        System.out.println("123");
+        System.out.printf("qkjwehqwjkhe");
         return ok(toJson(categories));
     }
 
+    @Transactional
+    public Result yetAnotherController() {
+        System.out.println("Nothing to be typed");
+        return badRequest();
+    }
 
     @ApiOperation(
             nickname = "getCategory",
